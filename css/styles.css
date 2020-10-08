@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+  color: #333;
+  background: #ccccff; 
+  display: flex;
+  min-height: 100vh;
+  display: 1;
+}
+
+aside {
+  width: 25%;
+  min-width: 250px;
+}
+
+.side {
+  height: 300px;
+  margin-top: 200px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  flex-direction: column;
+}
+
+
+
+header {
+  background: #8989ff;
+  color: #fff;
+  text-align: center;
+  padding-top: 64px;
+  display: 1;
+}
+
+header h1,
+header p {
+  margin: 0;
+  text-align: center;
+}
+
+header img {
+  width: 240px;
+  vertical-align: bottom;
+}
+
+.btn {
+  text-decoration: none;
+  background: #fff;
+  color: #8989ff;
+  display: block;
+  width: 140px;
+  line-height: 44px;
+  margin: 40px auto 48px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  border-bottom: solid 4px #6e6ecc;
+}
+
+.btn:hover {
+  /* ボタンにカーソルした時 */
+  opacity: 0.8;
+}
+
+.btn:active {
+  /* ボタンを押した時 */
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+
+.features {
+}
+
+.features img {
+  width: 100%;
+  padding: 64px 0;
+}
+
+.features > h1 {
+  text-align: center;
+  padding: 64px 0;
+  font-weight: normal;
+}
+
+.features .container {
+  margin: 0 32px;
+}
+
+.features p {
+  line-height: 1.8;
+  text-align: center;
+}
+
+.features section {
+  padding-bottom: 64px;
+}
+
+.skills {
+  background: #ccccff;
+  flex: 1;
+}
+
+.skills > h1 {
+  text-align: center;
+  padding: 64px 0;
+  font-weight: normal;
+}
+
+.skills ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.skills img {
+  width: 160px;
+  border-radius: 50%;
+}
+
+.skills h2 {
+  font-size: 20px;
+}
+
+.skills li {
+  padding-bottom: 64px;
+}
+
+.call-to-action {
+  background: #8989ff;
+  color: #fff;
+  text-align: center;
+  padding-top: 64px 0;
+  padding-bottom: 32px;
+  flex: 1;
+}
+
+.call-to-action h1 {
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.call-to-action .btn {
+  margin: 0 auto;
+}
+
+footer {
+  padding: 64px 0;
+  background: #1c1c33;
+  color: #9999ff;
+  text-align: center;
+  flex: 1;
+  margin: 0;
+}
+
+/* 🍔 */
+.open,
+.close {
+  display: none;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -50vw;
+}
+/* 🍔 */
+
+@media (min-width: 900px) {
+  header .container {
+    display: flex;
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  header .info {
+    width: 60%;
+    align-self: center;
+  }
+
+  header .pic {
+    width: 40%;
+  }
+
+  .features .container {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .features section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .features .pic {
+    width: 50%;
+  }
+
+  .features .info {
+    width: calc(50% - 32px);
+  }
+
+  .skills ul {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .skills li {
+    width: 250px;
+  }
+
+  .skills li .pic {
+    width: 250px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+      width: 100%;
+      padding-top: 50px;
+  }
+  /* 🍔 */
+  .open,
+  .close {
+      display: block;
+  }
+  .open {
+      position: absolute;
+  }
+  aside {
+      position: absolute;
+      left: -250px;
+      height: 100%;
+      transition: all 0.2s;
+      background: #ffffff;
+  }
+  input[type="checkbox"]:checked ~ aside {
+      left: 0;
+  }
+  input[type="checkbox"]:checked ~ .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8) !important;
+  }
+  /* 🍔 */
+}
